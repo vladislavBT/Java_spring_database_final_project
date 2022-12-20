@@ -33,6 +33,15 @@ public class Job {
     @Column(columnDefinition = "TEXT")
     private String description;
 
+    public Job(Long id, String title, double salary, double hoursAWeek, String description, Company company) {
+        this.id = id;
+        this.title = title;
+        this.salary = salary;
+        this.hoursAWeek = hoursAWeek;
+        this.description = description;
+        this.company = company;
+    }
+
     @ManyToOne
     private Company company;
 }
